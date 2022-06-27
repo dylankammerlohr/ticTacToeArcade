@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Poppins&family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+    <title>tic tac toe</title>
+</head>
+<body>
+    <header>
+        <h1>tic-tac-toe</h1>
+    </header>
+    <div id="player-buttons" style="display:flex">
+        <button type="button" id="single-player-button" onclick="playerGameOptions()">one player</button>
+        <button type="button" id="two-player-button" onclick="twoPlayerOption()">two players</button>
+    </div>
+    <div id="single-player" style="display:none">
+        <form id="names">
+            <p class="enter-names">enter your name:</p>
+            <input type="text" id="single-name" autocomplete="off"><br>
+            <button type="button" id="start-button" onclick="singleStart()">start new game</button>
+        </form>
+    </div> 
+    <div id="name-results-single">
+        <p id="single-player-name"></p>
+        <p id="computer"></p>
+    </div>
+    <div id="two-players" style="display:none">
+        <form id="names">
+            <p class="enter-names">enter player names:</p>
+            <input type="text" id="player-one" placeholder="player one" autocomplete="off"><br>
+            <input type="text" id="player-two" placeholder="player two" autocomplete="off"><br>
+            <button type="button" id="start-button" onclick="startButton()">start new game</button> 
+        </form>
+     </div>    
+     <div>  
+        <p id="start-player"></p>
+    </div>  
+    <div id="name-results">
+        <p id="name-one"></p>
+        <p id="name-two"></p>
+    </div>  
+    <div class="board">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div id="messages">
+        <p id="end-of-game-message"></p> 
+    </div>
+    <div>
+        <form>
+            <button id="restart-button" onclick="gameState()">restart</button>
+        </form>
+    </div>
+    <script src="/app.js"></script>
+</body>
+</html>
